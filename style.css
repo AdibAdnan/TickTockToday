@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#time {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 7rem;
+}
+
+#timezone {
+    text-align: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+}
+
+
+#date {
+    text-align: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+}
