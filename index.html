@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/micromodal/dist/micromodal.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
-        <h1 id="timezone"></h1>
+        <div class="timezone-display">
+            <h1 id="timezone"></h1><button id="timezone-button" data-micromodal-trigger="timezone-modal"><i class="fas fa-globe"></i></button>
+        </div>
         <h1 id="time"></h1>
         <h1 id="date"></h1>
-    </div>
-    
-    
-    <script  type="module" src="script.js"></script>
+     </div>
+
+    <!-- Modal for Timezone Selection -->
+    <div class="modal micromodal-slide" id="timezone-modal" aria-hidden="true"
+         aria-labelledby="timezone-modal-title" role="dialog">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="timezone-modal-title">
+            <header class="modal__header">
+              <h2 class="modal__title" id="timezone-modal-title">
+                Select Timezone
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="timezone-modal-content">
+              <select id="timezone-select"></select>
+            </main>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>-->
+    <script src="script.js"></script>
 </body>
 </html>
